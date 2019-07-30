@@ -43,15 +43,15 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # App shortcuts
-bindsym $mod+c exec google-chrome-beta
+bindsym $mod+c exec google-chrome-beta # c for chrome
 bindsym $mod+e exec emacs
 bindsym $mod+q exec qbittorrent
 
 # Multi-monitor support
-bindsym $mod+h exec xrandr | grep 'HDMI1 connected' && xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1
+bindsym $mod+h exec xrandr | grep 'HDMI1 connected' && xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1 # h for HDMI
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
-bindsym $mod+a exec pavucontrol
+bindsym $mod+a exec pavucontrol # a for audio
 
 # change focus
 bindsym $mod+j focus left
@@ -165,6 +165,10 @@ mode "resize" {
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Shift+Left resize shrink width 5 px or 5 ppt
+        bindsym Shift+Down resize grow height 5 px or 5 ppt
+        bindsym Shift+Up resize shrink height 5 px or 5 ppt
+        bindsym Shift+Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
